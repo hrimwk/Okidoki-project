@@ -34,10 +34,12 @@ import ChangePasswordConfirm from './pages/Settings/ProfileSetting/ChangePassWor
 // 회원 탈퇴
 import SecessionTab from './pages/Settings/ProfileSetting/Secession/SecessionTab';
 import JobsNew from './pages/NewPost/JobsNew';
+import GlobalStyle from './styles/GlobalStyle';
 
 export default function Router() {
   return (
     <BrowserRouter>
+      <GlobalStyle />
       <Header />
       <Routes>
         {/* 메인페이지 */}
@@ -68,7 +70,10 @@ export default function Router() {
         <Route path="settings/*" element={<Settings />} />
 
         {/* 비밀번호 변경 */}
-        <Route path="settings/password-changes" element={<ChangePasswordConfirm />} />
+        <Route
+          path="settings/password-changes"
+          element={<ChangePasswordConfirm />}
+        />
 
         {/* 회원 탈퇴 */}
         <Route path="/user/withdrawConfirm" element={<SecessionTab />} />
