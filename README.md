@@ -1,4 +1,4 @@
-### okidoki팀의 **`okky`** Clone 코딩 프로젝트입니다.
+### **`okky`** 를 모티브로 진행한 프로젝트입니다.
 👉[okky](https://okky.kr/)
 
 ---
