@@ -8,13 +8,11 @@ export default function ProfileImg(props) {
   const [view, setView] = useState(false);
 
   const onChangeImg = e => {
-    console.log(e.target.files);
     e.preventDefault();
     if (e.target.files) {
       const uploadFile = e.target.files[0];
       const formData = new FormData();
       formData.append('filename', uploadFile);
-      console.log(uploadFile);
       axios
         .patch('http://localhost:8000/profile/image', formData, {
           headers: {
