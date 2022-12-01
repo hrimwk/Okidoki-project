@@ -1,8 +1,9 @@
 import { useMemo } from 'react';
 import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 //import { useEffect } from 'react';
 //import styled from 'styled-components';
-import './quill.snow.scss';
+// import './quill.snow.scss';
 
 function Texteditor(props) {
   const { setwritecomment, writecomment } = props;
