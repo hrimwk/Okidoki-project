@@ -11,11 +11,6 @@
 
 <br>
 
-### **프로젝트 구현 영상**
-
-영상링크 필요 
-
-<br>
 
 ### **개발 인원 및 기간**
 ​
@@ -23,7 +18,7 @@
 - 개발 인원 : 6명
 - 프론트 엔드 : 이혜림, 유상호, 박기호, 천찬영
 - 백 엔드 : 김현정, 김윤희
-- [프론트엔드 Github 링크](hhttps://github.com/wecode-bootcamp-korea/justcode-6-2nd-team3-front)
+- [프론트엔드 Github 링크](https://github.com/hrimwk/Okidoki-project)
 - [백엔드 Github 링크](https://github.com/wecode-bootcamp-korea/justcode-6-2nd-team3-back)
 
 <br>
@@ -33,7 +28,7 @@
 - 이혜림
     - 메인 페이지
     - 게시글 작성(각 카테고리별 및 구인)
-    - 태그 
+    - 태그 검색 및 생
 
 - 유상호
    - 게시글 목록
