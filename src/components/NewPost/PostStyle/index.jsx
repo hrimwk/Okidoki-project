@@ -1,16 +1,14 @@
+import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import styled from 'styled-components';
 
-function PostStyle(props) {
-  const [content, setContent] = useState();
+function PostStyle({ setContent, content }) {
   const getContent = value => {
     setContent(value);
   };
-  useEffect(() => {
-    props.getStyledContent(content);
-  }, [content, props]);
+
   const formats = [
     'header',
     'bold',
@@ -29,7 +27,6 @@ function PostStyle(props) {
   const modules = useMemo(
     () => ({
       toolbar: {
-        // 툴바에 넣을 기능들을 순서대로 나열하면 된다.
         container: [
           [{ header: 1 }, { header: 2 }],
           ['bold', 'italic', 'underline', 'strike'],
@@ -75,4 +72,4 @@ const QuillContainer = styled.div`
   }
 `;
 
-export default PostStyle;
+export default React.memo(PostStyle);

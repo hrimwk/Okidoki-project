@@ -1,18 +1,12 @@
 import axios from 'axios';
+import React from 'react';
 import { useEffect, useState } from 'react';
 import CreatableSelect from 'react-select/creatable';
 
 function SelectTag(props) {
-  const { placeholder, getSelectValue } = props;
-  const [tagValue, setTag] = useState([]);
+  const { placeholder, setTag } = props;
   const [inputValue, setInput] = useState('');
   const [options, setOptions] = useState([]);
-
-  // const options = [
-  //   { id: 1, value: '1', label: '1' },
-  //   { id: 2, value: '2', label: '2' },
-  //   { id: 3, value: '3', label: '3' },
-  // ];
 
   useEffect(() => {
     axios.get(`http://localhost:8000/tags?keyword=${inputValue}`).then(res => {
@@ -42,9 +36,6 @@ function SelectTag(props) {
     );
   };
 
-  useEffect(() => {
-    getSelectValue(tagValue);
-  }, [tagValue]);
   const onInputChange = value => {
     setInput(value);
   };
@@ -63,4 +54,4 @@ function SelectTag(props) {
   );
 }
 
-export default SelectTag;
+export default React.memo(SelectTag);

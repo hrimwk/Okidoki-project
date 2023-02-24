@@ -24,13 +24,6 @@ function NewPostLayout(props) {
 
   const placeholder = '태그를 입력해주세요';
 
-  const getSelectValue = data => {
-    setTag(data);
-  };
-  const getStyledContent = data => {
-    setContent(data);
-  };
-
   const selectVal = e => {
     setValue(e.target.value);
   };
@@ -100,9 +93,9 @@ function NewPostLayout(props) {
           onChange={inputVal}
         />
         <Label>태그</Label>
-        <SelectTag placeholder={placeholder} getSelectValue={getSelectValue} />
+        <SelectTag placeholder={placeholder} setTag={setTag} />
         <Label>상세정보</Label>
-        <PostStyle getStyledContent={getStyledContent} />
+        <PostStyle setContent={setContent} content={styledContent} />
         <ReCaptcha />
         <ButtonArea>
           <Button type="reset">취소</Button>
